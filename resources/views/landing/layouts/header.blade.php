@@ -1,127 +1,115 @@
-<!-- BEGIN #header -->
-<div id="header" class="app-header">
-    <!-- BEGIN mobile-toggler -->
-    <div class="mobile-toggler">
-        <button type="button" class="menu-toggler" data-toggle="sidebar-mobile">
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-    </div>
-    <!-- END mobile-toggler -->
-
-    <!-- BEGIN brand -->
-    <div class="brand">
-        <div class="desktop-toggler">
-            <button type="button" class="menu-toggler" data-toggle="sidebar-minify">
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-
-        <a href="{{ route('admin.dashboard') }}" class="brand-logo">
-            <img src="{{ asset('assets/img/logo.png') }}" class="invert-dark" alt="" height="20">
-        </a>
-    </div>
-    <!-- END brand -->
-
-    <!-- BEGIN menu -->
-    <div class="menu">
-        <form class="menu-search" method="POST" name="header_search_form">
-            @csrf
-            <div class="menu-search-icon"><i class="fa fa-search"></i></div>
-            <div class="menu-search-input">
-                <input type="text" class="form-control" placeholder="Search menu...">
-            </div>
-        </form>
-
-        <div class="menu-item dropdown">
-            <a href="#" data-bs-toggle="dropdown" data-display="static" class="menu-link">
-                <div class="menu-icon"><i class="fa fa-bell nav-icon"></i></div>
-                <div class="menu-label">3</div>
+<!-- Navbar & Hero Start -->
+<div class="container-fluid header-top">
+    <div class="nav-shaps-2"></div>
+    <div class="container d-flex align-items-center">
+        <div class="d-flex align-items-center h-100">
+            <a href="{{ route('home') }}" class="navbar-brand" style="height: 125px;">
+                <h1 class="text-primary mb-0"><i class="fas fa-hand-rock me-2"></i> Fitness</h1>
+                <!-- <img src="{{ asset('landing/img/logo.png') }}" alt="Logo"> -->
             </a>
-            <div class="dropdown-menu dropdown-menu-end dropdown-notification">
-                <h6 class="dropdown-header text-body-emphasis mb-1">Notifications</h6>
-                <a href="#" class="dropdown-notification-item">
-                    <div class="dropdown-notification-icon">
-                        <i class="fa fa-receipt fa-lg fa-fw text-success"></i>
+        </div>
+        <div class="w-100 h-100">
+            <div class="topbar px-0 py-2 d-none d-lg-block" style="height: 45px;">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-8 text-center text-lg-center mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <div class="pe-4">
+                                <a href="mailto:example@gmail.com" class="text-muted small">
+                                    <i class="fas fa-envelope text-primary me-2"></i>example@gmail.com
+                                </a>
+                            </div>
+                            <div class="pe-0">
+                                <a href="javascript:void(0)" class="text-muted small">
+                                    <i class="fa fa-clock text-primary me-2"></i>Mon - Sat: 8.00 am-7.00 pm
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="dropdown-notification-info">
-                        <div class="title">Your store has a new order for 2 items totaling $1,299.00</div>
-                        <div class="time">just now</div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex align-items-center small">
+                                <a href="#" class="login-btn text-body me-3 pe-3"> <span>Login</span></a>
+                                <a href="#" class="text-body me-3"> Register</a>
+                            </div>
+                            <div class="d-flex pe-3">
+                                <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="dropdown-notification-arrow">
-                        <i class="fa fa-chevron-right"></i>
-                    </div>
-                </a>
-                <a href="#" class="dropdown-notification-item">
-                    <div class="dropdown-notification-icon">
-                        <i class="far fa-user-circle fa-lg fa-fw text-muted"></i>
-                    </div>
-                    <div class="dropdown-notification-info">
-                        <div class="title">3 new customer account is created</div>
-                        <div class="time">2 minutes ago</div>
-                    </div>
-                    <div class="dropdown-notification-arrow">
-                        <i class="fa fa-chevron-right"></i>
-                    </div>
-                </a>
-                <a href="#" class="dropdown-notification-item">
-                    <div class="dropdown-notification-icon">
-                        <img src="{{ asset('assets/img/icon/android.svg') }}" alt="" width="26">
-                    </div>
-                    <div class="dropdown-notification-info">
-                        <div class="title">Your android application has been approved</div>
-                        <div class="time">5 minutes ago</div>
-                    </div>
-                    <div class="dropdown-notification-arrow">
-                        <i class="fa fa-chevron-right"></i>
-                    </div>
-                </a>
-                <a href="#" class="dropdown-notification-item">
-                    <div class="dropdown-notification-icon">
-                        <img src="{{ asset('assets/img/icon/paypal.svg') }}" alt="" width="26">
-                    </div>
-                    <div class="dropdown-notification-info">
-                        <div class="title">Paypal payment method has been enabled for your store</div>
-                        <div class="time">10 minutes ago</div>
-                    </div>
-                    <div class="dropdown-notification-arrow">
-                        <i class="fa fa-chevron-right"></i>
-                    </div>
-                </a>
-                <div class="p-2 text-center mb-n1">
-                    <a href="#" class="text-body-emphasis text-opacity-50 text-decoration-none">See all</a>
                 </div>
             </div>
-        </div>
-
-        <div class="menu-item dropdown">
-            <a href="#" data-bs-toggle="dropdown" data-display="static" class="menu-link">
-                <div class="menu-img online">
-                    <img src="{{ asset('assets/img/user/user.jpg') }}" alt="" class="ms-100 mh-100 rounded-circle">
-                </div>
-                <div class="menu-text">johnsmith@studio.com</div>
-            </a>
-            <div class="dropdown-menu dropdown-menu-end me-lg-3">
-                <a class="dropdown-item d-flex align-items-center" href="{{ route('admin.dashboard') }}">
-                    Edit Profile <i class="fa fa-user-circle fa-fw ms-auto text-body text-opacity-50"></i>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="{{ route('admin.dashboard') }}">
-                    Inbox <i class="fa fa-envelope fa-fw ms-auto text-body text-opacity-50"></i>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="{{ route('admin.calendar') }}">
-                    Calendar <i class="fa fa-calendar-alt fa-fw ms-auto text-body text-opacity-50"></i>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="{{ route('admin.dashboard') }}">
-                    Setting <i class="fa fa-wrench fa-fw ms-auto text-body text-opacity-50"></i>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item d-flex align-items-center" href="{{ route('admin.login') }}">
-                    Log Out <i class="fa fa-toggle-off fa-fw ms-auto text-body text-opacity-50"></i>
-                </a>
+            <div class="nav-bar px-0 py-lg-0" style="height: 80px;">
+                <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
+                    <a href="{{ route('home') }}" class="navbar-brand-2">
+                        <h1 class="text-primary mb-0"><i class="fas fa-hand-rock me-2"></i> Fitness</h1>
+                        <!-- <img src="{{ asset('landing/img/logo.png') }}" alt="Logo"> -->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto">
+                            <a href="{{ route('home') }}"
+                                class="nav-item nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
+                            <a href="{{ route('about') }}"
+                                class="nav-item nav-link {{ request()->routeIs('about') ? 'active' : '' }}">About</a>
+                            <a href="{{ route('courses') }}"
+                                class="nav-item nav-link {{ request()->routeIs('courses') ? 'active' : '' }}">Courses</a>
+                            <a href="{{ route('blogs') }}"
+                                class="nav-item nav-link {{ request()->routeIs('blogs') ? 'active' : '' }}">Blogs</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">Pages</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="{{ route('feature') }}" class="dropdown-item">Our Features</a>
+                                    <a href="{{ route('team') }}" class="dropdown-item">Our team</a>
+                                    <a href="{{ route('testimonial') }}" class="dropdown-item">Testimonial</a>
+                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                </div>
+                            </div>
+                            <a href="{{ route('contact') }}"
+                                class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
+                            <div class="nav-btn ps-3">
+                                <button
+                                    class="btn-search btn btn-primary btn-md-square mt-2 mt-lg-0 mb-4 mb-lg-0 flex-shrink-0"
+                                    data-bs-toggle="modal" data-bs-target="#searchModal">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                                <a href="#" class="btn btn-primary py-2 px-4 ms-0 ms-lg-3"> <span>Get Quote</span></a>
+                            </div>
+                            <div class="nav-shaps-1"></div>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
-    <!-- END menu -->
 </div>
-<!-- END #header -->
+<!-- Navbar & Hero End -->
+
+<!-- Modal Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center bg-primary">
+                <div class="input-group w-75 mx-auto d-flex">
+                    <input type="search" class="form-control p-3" placeholder="keywords"
+                        aria-describedby="search-icon-1">
+                    <span id="search-icon-1" class="btn bg-light border input-group-text p-3">
+                        <i class="fa fa-search"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Search End -->
