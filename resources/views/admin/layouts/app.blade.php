@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-    @include('landing.layouts.head')
+    @include('admin.layouts.head')
 </head>
 
 <body>
@@ -23,13 +23,13 @@
         <!-- END btn-scroll-top -->
 
         <!-- Footer Start -->
-        @include('landing.layouts.footer')
+        @include('admin.layouts.footer')
         <!-- Footer End -->
     </div>
     <!-- END #app -->
 
     <!-- JS Scripts -->
-    @include('landing.layouts.script')
+    @include('admin.layouts.script')
 </body>
 
 </html>
